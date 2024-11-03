@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        border: 2px solid black;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(249, 244, 244);
+        flex-wrap: wrap;
+        box-shadow: 2px;
+        border-radius: 3px;
+    }
+    .Box{
+        border: 2px solid black;
+        width: 30vh;
+        height: 60vh;
+        justify-content: space-around;
+        background-color: blanchedalmond;
+        box-shadow: 2px;
+        align-items: center;
+    }
+
+</style>
+<body>
+    <div class="parent">
+        <div class="Box" id="basic">Basic</div>
+        <div class="Box" id="premium">Premium</div>
+        <div class="Box" id="pro">Pro</div>
+
+    </div>
+    
+</body>
+</html>
