@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Document</title>
 </head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-left: 15px;
+        padding: 50;
+
+    }
+    body{
+        border: 2px solid black;
+        height: 90vh;
+        
+    }
+</style>
 <body>
-    <h2>Login Form</hs>
-    <form>
-        <label>Enter Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="email" name="email" placeholder="Enter email" required>
-        <br>
-        <label>Enter password</label>
-        <input type="password" name="password" placeholder="Enter password" required>
-        <br><br>
-        <input type="submit" name="btn" value="login">
+    <h1>Login Page</h1>
+    <label>Username:</label>
+    <input type="text" name="username" placeholder="enter username" required>
+    <br><br>
+    <label>Password:</label>
+    <input type="password" name="password" placeholder="enter password" required>
+    <br><br>
+    <input type="submit" name="btn" value="submit">
         &nbsp;&nbsp;&nbsp;
-        <input type="reset" value="Clear Data">
-    </form>
+        <input type="reset" value="Reset">
+        <script>
+           
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+
+            if (username === "AIMLC" && password === "AIMLC") {
+                errorMessage.textContent = "";
+                window.location.href = "generator.html";
+                return false;
+            } else {
+                errorMessage.textContent = "Error: Username and Password must be 'AIMLC'.";
+                return false;
+            }
+        }
+        </script>
 </body>
 </html>
